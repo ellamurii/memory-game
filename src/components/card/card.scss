@@ -1,0 +1,31 @@
+$card-color: #5f98b3;
+$darker-card-color: darken($card-color, 15%);
+
+.card {
+  height: 220px;
+  padding: 5px 0px;
+  .card-image {
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid;
+    background: $card-color;
+    &.flipped {
+      background: repeating-linear-gradient(
+        45deg,
+        $card-color,
+        $card-color 10px,
+        $darker-card-color 10px,
+        $darker-card-color 20px
+      );
+    }
+    > div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      height: 65%;
+    }
+  }
+}
